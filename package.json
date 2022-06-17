@@ -1,0 +1,34 @@
+{
+  "name": "injectweb3-connect",
+  "version": "1.0.0",
+  "description": "Package for connecting wallets injected with injectWeb3 object",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WRadoslaw/injectWeb3-connect.git"
+  },
+  "keywords": [
+    "polkadot",
+    "injectWeb3"
+  ],
+  "author": "Radoslaw Wyszynski",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/WRadoslaw/injectWeb3-connect/issues"
+  },
+  "homepage": "https://github.com/WRadoslaw/injectWeb3-connect#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.28.0",
+    "@typescript-eslint/parser": "^5.28.0",
+    "eslint": "^8.17.0",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "@polkadot/api": "^8.8.2",
+    "@polkadot/extension-dapp": "^0.44.1",
+    "@polkadot/extension-inject": "^0.44.1"
+  }
+}
