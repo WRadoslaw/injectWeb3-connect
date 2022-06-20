@@ -1,32 +1,27 @@
 {
-  "compilerOptions":{
-    "target":"es2020",
-    "lib":[
-      "DOM",
-      "ES2017"
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "noImplicitAny": true,
+    "module": "CommonJS",
+    "lib": [
+      "dom",
+      "es2015"
     ],
-    "skipDefaultLibCheck":true,
-    "module":"CommonJS",
-    "rootDir":"./src",
-    "moduleResolution":"node",
-    "importHelpers":true,
-    "declaration":true,
-    "sourceMap":true,
-    "outDir":"./dist",
-    "declarationDir":"./dist/types",
-    "esModuleInterop":true,
-    "forceConsistentCasingInFileNames":true,
+    "target": "es5",
+    "allowJs": true,
     "strict":true,
     "strictNullChecks":true,
     "alwaysStrict":true,
     "noUnusedLocals":true,
     "noUnusedParameters":true,
     "noImplicitReturns":true,
+    "forceConsistentCasingInFileNames":true,
     "noFallthroughCasesInSwitch":true,
     "allowUnreachableCode":false,
-    "skipLibCheck":true
+    "declaration": true,
+    "sourceMap": true,
+    "declarationDir": "./dist",
+    "esModuleInterop": true
   },
-  "exclude":[
-    "**/node_modules"
-  ]
+  "files": ["src/index.ts"]
 }
