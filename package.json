@@ -2,9 +2,11 @@
   "name": "injectweb3-connect",
   "version": "1.0.0",
   "description": "Package for connecting wallets injected with injectWeb3 object",
-  "main": "index.js",
+  "main": "dist/index",
+  "types": "dist/types/index",
+  "type": "commonjs",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "del /dist/* && tsc"
   },
   "repository": {
     "type": "git",
@@ -24,11 +26,14 @@
     "@typescript-eslint/eslint-plugin": "^5.28.0",
     "@typescript-eslint/parser": "^5.28.0",
     "eslint": "^8.17.0",
+    "prettier": "^2.7.1",
+    "process": "^0.11.10",
     "typescript": "^4.7.4"
   },
   "dependencies": {
     "@polkadot/api": "^8.8.2",
     "@polkadot/extension-dapp": "^0.44.1",
-    "@polkadot/extension-inject": "^0.44.1"
+    "@polkadot/extension-inject": "^0.44.1",
+    "@polkadot/util-crypto": "^9.4.1"
   }
 }
