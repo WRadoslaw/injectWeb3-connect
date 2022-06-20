@@ -1,6 +1,4 @@
 import { BaseDotsamaWallet } from '../base-dotsama-wallet'
-// @ts-ignore
-import logo from './PolkadotjsLogo.svg'
 
 export class PolkadotjsWallet extends BaseDotsamaWallet {
 	extensionName = 'polkadot-js'
@@ -10,7 +8,7 @@ export class PolkadotjsWallet extends BaseDotsamaWallet {
 	installUrl =
 		'https://chrome.google.com/webstore/detail/polkadot%7Bjs%7D-extension/mopnmbcafieddcagagdcbnhejhlodfdd/related'
 	logo = {
-		src: logo,
+		src: './PolkadotjsLogo.svg',
 		alt: 'Polkadotjs Logo',
 	}
 }

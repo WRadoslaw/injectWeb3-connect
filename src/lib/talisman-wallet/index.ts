@@ -1,6 +1,4 @@
 import { BaseDotsamaWallet } from '../base-dotsama-wallet'
-// @ts-ignore
-import logo from './TalismanLogo.svg'
 
 export class TalismanWallet extends BaseDotsamaWallet {
 	extensionName = 'talisman'
@@ -9,7 +7,7 @@ export class TalismanWallet extends BaseDotsamaWallet {
 	noExtensionMessage =
 		'You can use any Polkadot compatible wallet but we recommend using Talisman'
 	logo = {
-		src: logo,
+		src: './TalismanLogo.svg',
 		alt: 'Talisman Logo',
 	}
 }
