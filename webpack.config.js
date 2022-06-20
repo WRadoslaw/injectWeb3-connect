@@ -5,9 +5,17 @@ const path = require('path')
 const isProduction = process.env.NODE_ENV === 'production'
 
 const config = {
-	entry: './src/index.ts',
+	entry: {
+		index: './src/index.ts',
+		'index.min': './src/index.ts',
+	},
+	target: 'node',
 	output: {
 		path: path.resolve(__dirname, 'dist'),
+		filename: '[name].js',
+		library: 'injectweb3-connect',
+		libraryTarget: 'umd',
+		umdNamedDefine: true,
 	},
 	plugins: [
 		// Add your plugins here

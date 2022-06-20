@@ -1,8 +1,8 @@
 {
   "name": "injectweb3-connect",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "Package for connecting wallets injected with injectWeb3 object",
-  "main": "dist/main.js",
+  "main": "dist/index",
   "type": "commonjs",
   "scripts": {
     "build": "webpack --mode=production --node-env=production",

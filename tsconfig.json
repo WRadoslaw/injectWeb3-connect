@@ -3,6 +3,10 @@
     "allowSyntheticDefaultImports": true,
     "noImplicitAny": true,
     "module": "CommonJS",
+    "lib": [
+      "dom",
+      "es2015"
+    ],
     "target": "es5",
     "allowJs": true,
     "strict":true,
@@ -13,7 +17,11 @@
     "noImplicitReturns":true,
     "forceConsistentCasingInFileNames":true,
     "noFallthroughCasesInSwitch":true,
-    "allowUnreachableCode":false
+    "allowUnreachableCode":false,
+    "declaration": true,
+    "sourceMap": true,
+    "declarationDir": "./dist",
+    "esModuleInterop": true
   },
   "files": ["src/index.ts"]
 }
