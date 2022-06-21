@@ -5,23 +5,39 @@ import {
 	InjectedWindow,
 } from '@polkadot/extension-inject/types'
 import type { Signer as InjectedSigner } from '@polkadot/api/types'
-import { SubscriptionFn, Wallet, WalletAccount } from '../../types'
+import { SubscriptionFn, Wallet, WalletAccount, WalletData } from '../../types'
 import { AuthError } from '../errors/AuthError'
 import { WalletError } from '../errors/BaseWalletError'
 import { NotInstalledError } from '../errors/NotInstalledError'
+import { capitalizeFirstLetter } from './helpers'
 
 // TODO: Create a proper BaseWallet class to offload common checks
 export class BaseDotsamaWallet implements Wallet {
 	extensionName = ''
 	title = ''
 	installUrl = ''
+	noExtensionMessage = ''
 	logo = {
 		src: '',
 		alt: '',
 	}
 
-	constructor(name?: string) {
-		this.extensionName = name ?? ''
+	constructor({
+		installUrl,
+		logo,
+		extensionName,
+		noExtensionMessage,
+		title,
+	}: Partial<WalletData>) {
+		this.extensionName = extensionName ?? ''
+		this.title =
+			title ?? capitalizeFirstLetter(this.extensionName.toLowerCase())
+		this.installUrl = installUrl ?? ''
+		this.noExtensionMessage = noExtensionMessage ?? ''
+		this.logo = logo ?? {
+			src: '',
+			alt: '',
+		}
 	}
 
 	_extension: InjectedExtension | undefined
