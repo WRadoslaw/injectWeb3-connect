@@ -1,5 +1,6 @@
 import { WalletData } from '../types'
 import { BaseDotsamaWallet } from './base-dotsama-wallet'
+import { PolkadotLogo, TalismanLogo, SubwalletLogo } from './assets'
 
 export const polkadotjsWallet: WalletData = {
 	extensionName: 'polkadot-js',
@@ -9,7 +10,7 @@ export const polkadotjsWallet: WalletData = {
 	installUrl:
 		'https://chrome.google.com/webstore/detail/polkadot%7Bjs%7D-extension/mopnmbcafieddcagagdcbnhejhlodfdd/related',
 	logo: {
-		src: '.assets/PolkadotjsLogo.svg',
+		src: PolkadotLogo,
 		alt: 'Polkadotjs Logo',
 	},
 }
@@ -22,7 +23,7 @@ export const subWallet: WalletData = {
 	installUrl:
 		'https://chrome.google.com/webstore/detail/subwallet/onhogfjeacnfoofkfgppdlbmlmnplgbn?hl=en&authuser=0',
 	logo: {
-		src: '.assets/SubWalletLogo.svg',
+		src: SubwalletLogo,
 		alt: 'Subwallet Logo',
 	},
 }
@@ -34,7 +35,7 @@ export const talismanWallet: WalletData = {
 		'You can use any Polkadot compatible wallet but we recommend using Talisman',
 	installUrl: 'https://app.talisman.xyz/spiritkeys',
 	logo: {
-		src: '.assets/TalismanLogo.svg',
+		src: TalismanLogo,
 		alt: 'Talisman Logo',
 	},
 }
