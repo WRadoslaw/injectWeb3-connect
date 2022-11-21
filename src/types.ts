@@ -1,8 +1,10 @@
-import { WalletError } from './index'
 import {
 	InjectedAccount,
 	InjectedAccountWithMeta,
+	MetadataDef,
 } from '@polkadot/extension-inject/types'
+
+import { WalletError } from './index'
 
 export type SubscriptionFn = (
 	accounts: WalletAccount[] | undefined,
@@ -51,6 +53,9 @@ interface WalletExtension {
 interface Signer {
 	// Sign function
 	sign?: (address: string, payload: string) => unknown
+
+	// Update metadata function
+	updateMetadata: (chainInfo: MetadataDef) => void
 }
 
 interface Connector {
