@@ -9,12 +9,12 @@ export const capitalizeFirstLetter = <T extends string>(str: T) =>
 export const getPolkadotApiChainInfo = async (
 	api: ApiRx | ApiPromise,
 ): Promise<MetadataDef> => {
-	const systemChain = await firstValueFrom(api.rpc.system.chain())
+	const systemChain = (await firstValueFrom(api.rpc.system.chain())) as string
 
 	return {
 		icon: 'beach-ball',
 		chainType: 'substrate',
-		chain: systemChain as unknown as string,
+		chain: systemChain,
 		metaCalls: base64Encode(api.runtimeMetadata.asCallsOnly.toU8a()),
 		types: getSpecTypes(
 			// eslint-disable-next-line @typescript-eslint/ban-ts-comment
