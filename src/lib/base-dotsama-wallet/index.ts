@@ -3,13 +3,17 @@ import {
 	InjectedAccountWithMeta,
 	InjectedExtension,
 	InjectedWindow,
+	MetadataDef,
 } from '@polkadot/extension-inject/types'
 import type { Signer as InjectedSigner } from '@polkadot/api/types'
-import { SubscriptionFn, Wallet, WalletAccount, WalletData } from '../../types'
+
+import { capitalizeFirstLetter } from './helpers'
+
 import { AuthError } from '../errors/AuthError'
 import { WalletError } from '../errors/BaseWalletError'
 import { NotInstalledError } from '../errors/NotInstalledError'
-import { capitalizeFirstLetter } from './helpers'
+
+import { SubscriptionFn, Wallet, WalletAccount, WalletData } from '../../types'
 
 // TODO: Create a proper BaseWallet class to offload common checks
 export class BaseDotsamaWallet implements Wallet {
@@ -73,6 +77,18 @@ export class BaseDotsamaWallet implements Wallet {
 		return err
 	}
 
+	updateMetadata = (chainInfo: MetadataDef): Promise<boolean> => {
+		if (!this.extension) {
+			throw new Error('EnabledError: Enable extension to update metadata')
+		}
+
+		if (!this.extension.metadata?.provide) {
+			throw new Error('No metadata present')
+		}
+
+		return this.extension.metadata.provide(chainInfo)
+	}
+
 	enable = async (dappName: string) => {
 		if (!dappName) {
 			throw new Error('MissingParamsError: Dapp name is required.')
@@ -133,7 +149,8 @@ export class BaseDotsamaWallet implements Wallet {
 				this,
 			)
 		}
-		const unsubscribe = this._extension.accounts.subscribe(
+
+		return this._extension.accounts.subscribe(
 			(accounts: InjectedAccount[]) => {
 				const accountsWithWallet = accounts.map((account) => {
 					return {
@@ -147,8 +164,6 @@ export class BaseDotsamaWallet implements Wallet {
 				callback(accountsWithWallet)
 			},
 		)
-
-		return unsubscribe
 	}
 
 	walletAccountToInjectedAccountWithMeta = (
