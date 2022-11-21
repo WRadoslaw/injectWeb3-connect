@@ -1,6 +1,6 @@
 {
   "name": "injectweb3-connect",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Package for connecting wallets injected with injectWeb3 object",
   "main": "dist/index",
   "type": "commonjs",
@@ -46,5 +46,6 @@
     "@polkadot/extension-inject": "^0.44.1",
     "@polkadot/types-known": "^9.9.1",
     "@polkadot/util-crypto": "^9.4.1"
-  }
+  },
+  "files": ["dist"]
 }
