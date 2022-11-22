@@ -12,7 +12,7 @@ export const getPolkadotApiChainInfo = async (
 	const systemChain = (await firstValueFrom(api.rpc.system.chain())) as string
 
 	return {
-		icon: 'beach-ball',
+		icon: 'beachball',
 		chainType: 'substrate',
 		chain: systemChain,
 		metaCalls: base64Encode(api.runtimeMetadata.asCallsOnly.toU8a()),

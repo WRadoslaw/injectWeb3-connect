@@ -55,7 +55,7 @@ interface Signer {
 	sign?: (address: string, payload: string) => unknown
 
 	// Update metadata function
-	updateMetadata: (chainInfo: MetadataDef) => void
+	updateMetadata: (chainInfo: MetadataDef) => Promise<boolean>
 }
 
 interface Connector {

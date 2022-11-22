@@ -77,13 +77,24 @@ export class BaseDotsamaWallet implements Wallet {
 		return err
 	}
 
-	updateMetadata = (chainInfo: MetadataDef): Promise<boolean> => {
+	updateMetadata = async (chainInfo: MetadataDef): Promise<boolean> => {
 		if (!this.extension) {
 			throw new Error('EnabledError: Enable extension to update metadata')
 		}
 
 		if (!this.extension.metadata?.provide) {
-			throw new Error('No metadata present')
+			throw new Error('No metadata update function')
+		}
+
+		const currentMetadata = (await this.extension.metadata.get()).find(
+			({ genesisHash }) => genesisHash === chainInfo.genesisHash,
+		)
+
+		if (
+			currentMetadata &&
+			chainInfo.specVersion >= currentMetadata.specVersion
+		) {
+			return false
 		}
 
 		return this.extension.metadata.provide(chainInfo)
