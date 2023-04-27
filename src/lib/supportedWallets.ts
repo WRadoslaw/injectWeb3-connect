@@ -1,4 +1,4 @@
-import { WalletData } from '../types'
+import { WalletData } from './types'
 import { BaseDotsamaWallet } from './base-dotsama-wallet'
 import { PolkadotLogo, TalismanLogo, SubwalletLogo } from './assets'
 

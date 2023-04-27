@@ -4,7 +4,7 @@ import {
 	MetadataDef,
 } from '@polkadot/extension-inject/types'
 
-import { WalletError } from './index'
+import { WalletError } from '../index'
 
 export type SubscriptionFn = (
 	accounts: WalletAccount[] | undefined,

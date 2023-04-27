@@ -9,11 +9,9 @@ import type { Signer as InjectedSigner } from '@polkadot/api/types'
 
 import { capitalizeFirstLetter } from './helpers'
 
-import { AuthError } from '../errors/AuthError'
-import { WalletError } from '../errors/BaseWalletError'
-import { NotInstalledError } from '../errors/NotInstalledError'
+import { AuthError, NotInstalledError, WalletError } from '../errors'
 
-import { SubscriptionFn, Wallet, WalletAccount, WalletData } from '../../types'
+import { SubscriptionFn, Wallet, WalletAccount, WalletData } from '../types'
 
 // TODO: Create a proper BaseWallet class to offload common checks
 export class BaseDotsamaWallet implements Wallet {
@@ -122,7 +120,7 @@ export class BaseDotsamaWallet implements Wallet {
 
 			const extension: InjectedExtension = {
 				...rawExtension,
-				// Manually add `InjectedExtensionInfo` so as to have a consistent response.
+				// Manually add `InjectedExtensionInfo` to have a consistent response.
 				name: this.extensionName,
 				version: injectedExtension.version,
 			}

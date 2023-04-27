@@ -1,9 +1,15 @@
 {
   "trailingComma": "all",
-  "tabWidth": 4,
-  "useTabs": true,
+  "tabWidth": 2,
   "semi": false,
   "singleQuote": true,
   "bracketSpacing": true,
-  "parser": "typescript"
+  "parser": "typescript",
+  "arrowParens": "always",
+  "useTabs": false,
+  "printWidth": 120,
+  "importOrder": ["^@/(.*)$", "^./", "^[./]"],
+  "importOrderParserPlugins": ["typescript"],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true
 }
