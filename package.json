@@ -1,6 +1,6 @@
 {
   "name": "injectweb3-connect",
-  "version": "1.2.7",
+  "version": "2.0.0",
   "description": "Package for connecting wallets injected with injectWeb3 object",
   "types": "dist/index.d.ts",
   "main": "dist/index.js",
