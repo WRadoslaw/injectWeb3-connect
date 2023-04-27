@@ -2,13 +2,11 @@
   "name": "injectweb3-connect",
   "version": "1.2.7",
   "description": "Package for connecting wallets injected with injectWeb3 object",
-  "main": "dist/index",
-  "type": "commonjs",
+  "types": "dist/index.d.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
   "scripts": {
-    "build": "webpack --mode=production --node-env=production",
-    "build:dev": "webpack --mode=development",
-    "build:prod": "webpack --mode=production --node-env=production",
-    "watch": "webpack --watch"
+    "build": "tsup"
   },
   "repository": {
     "type": "git",
@@ -31,6 +29,7 @@
     "@typescript-eslint/parser": "^5.28.0",
     "eslint": "^8.17.0",
     "prettier": "^2.7.1",
+    "tsup": "^6.7.0",
     "typescript": "^4.7.4"
   },
   "dependencies": {

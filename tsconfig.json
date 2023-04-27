@@ -2,12 +2,12 @@
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
     "noImplicitAny": true,
-    "module": "CommonJS",
+    "module": "ESNext",
+    "moduleResolution": "Node",
     "lib": [
       "dom",
       "es2015"
     ],
-    "target": "es5",
     "allowJs": true,
     "strict":true,
     "strictNullChecks":true,
@@ -19,7 +19,6 @@
     "noFallthroughCasesInSwitch":true,
     "allowUnreachableCode":false,
     "declaration": true,
-    "sourceMap": true,
     "declarationDir": "./dist",
     "esModuleInterop": true
   },
