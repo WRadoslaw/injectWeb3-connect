@@ -7,10 +7,9 @@ import {
   MetadataDef,
 } from '@polkadot/extension-inject/types'
 
-import { capitalizeFirstLetter } from './helpers'
-
 import { AuthError, NotInstalledError, WalletError } from '../errors'
 import { SubscriptionFn, Wallet, WalletAccount, WalletData } from '../types'
+import { capitalizeFirstLetter } from '../utils'
 
 // TODO: Create a proper BaseWallet class to offload common checks
 export class BaseDotsamaWallet implements Wallet {
