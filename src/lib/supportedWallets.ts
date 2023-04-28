@@ -1,6 +1,6 @@
 import { PolkadotLogo, SubwalletLogo, TalismanLogo } from './assets'
 import { BaseDotsamaWallet } from './base-dotsama-wallet'
-import { WalletData } from './types'
+import { WalletData } from './types/types'
 
 export const polkadotjsWallet: WalletData = {
   extensionName: 'polkadot-js',

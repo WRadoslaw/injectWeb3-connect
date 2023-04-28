@@ -1,6 +1,6 @@
-import { InjectedAccount, InjectedAccountWithMeta, MetadataDef } from '@polkadot/extension-inject/types'
+import { InjectedAccount, InjectedAccountWithMeta, MetadataDef } from './polkadotTypes'
 
-import { WalletError } from '../index'
+import { WalletError } from '../errors'
 
 export type SubscriptionFn = (accounts: WalletAccount[] | undefined) => void | Promise<void>
 

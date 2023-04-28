@@ -1,4 +1,4 @@
-import { Wallet } from '../types'
+import { Wallet } from '../types/types'
 
 export interface WalletError extends Error {
   readonly wallet: Wallet

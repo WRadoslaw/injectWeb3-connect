@@ -1,9 +1,9 @@
 import { ApiPromise, ApiRx } from '@polkadot/api'
-import { InjectedWindow, MetadataDef } from '@polkadot/extension-inject/types'
 import { getSpecTypes } from '@polkadot/types-known'
 import { base64Encode } from '@polkadot/util-crypto'
 
 import supportedWallets from './supportedWallets'
+import { InjectedWindow, MetadataDef } from './types/polkadotTypes'
 import { firstValueFrom } from './utils'
 
 import { BaseDotsamaWallet, Wallet } from '../index'

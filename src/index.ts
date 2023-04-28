@@ -1,4 +1,5 @@
-export * from './lib/types'
+export * from './lib/types/types'
+export * from './lib/types/polkadotTypes'
 export * from './lib/helpers'
 export * from './lib/supportedWallets'
 export * from './lib/base-dotsama-wallet'

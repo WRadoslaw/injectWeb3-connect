@@ -4,6 +4,7 @@
     "noImplicitAny": true,
     "module": "ESNext",
     "moduleResolution": "Node",
+    "target": "ESNext",
     "lib": [
       "dom",
       "es2015"

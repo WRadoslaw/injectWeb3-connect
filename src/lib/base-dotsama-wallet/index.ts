@@ -1,14 +1,14 @@
 import type { Signer as InjectedSigner } from '@polkadot/api/types'
+
+import { AuthError, NotInstalledError, WalletError } from '../errors'
 import {
   InjectedAccount,
   InjectedAccountWithMeta,
   InjectedExtension,
   InjectedWindow,
   MetadataDef,
-} from '@polkadot/extension-inject/types'
-
-import { AuthError, NotInstalledError, WalletError } from '../errors'
-import { SubscriptionFn, Wallet, WalletAccount, WalletData } from '../types'
+} from '../types/polkadotTypes'
+import { SubscriptionFn, Wallet, WalletAccount, WalletData } from '../types/types'
 import { capitalizeFirstLetter } from '../utils'
 
 // TODO: Create a proper BaseWallet class to offload common checks
