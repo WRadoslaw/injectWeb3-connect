@@ -6,7 +6,7 @@
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "scripts": {
-    "build": "tsup"
+    "build": "tsup-node"
   },
   "repository": {
     "type": "git",
