@@ -6,7 +6,7 @@ export default defineConfig({
   clean: process.env.BUILD_ENV === 'production',
   dts: true,
   format: ['cjs', 'esm'],
-  loader: { '.png': 'copy' },
+  loader: { '.webp': 'copy' },
   minify: process.env.BUILD_ENV === 'production',
   external: ['@polkadot/api'],
 })
