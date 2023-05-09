@@ -20,7 +20,7 @@ export const subWallet: WalletData = {
   noExtensionMessage: 'You can use any Polkadot compatible wallet but we recommend using Talisman',
   installUrl: 'https://chrome.google.com/webstore/detail/subwallet/onhogfjeacnfoofkfgppdlbmlmnplgbn?hl=en&authuser=0',
   logo: {
-    src: SubwalletLogo,
+    src: SubwalletLogo as any,
     alt: 'Subwallet Logo',
   },
 }
@@ -31,7 +31,7 @@ export const talismanWallet: WalletData = {
   noExtensionMessage: 'You can use any Polkadot compatible wallet but we recommend using Talisman',
   installUrl: 'https://app.talisman.xyz/spiritkeys',
   logo: {
-    src: TalismanLogo,
+    src: TalismanLogo as any,
     alt: 'Talisman Logo',
   },
 }
