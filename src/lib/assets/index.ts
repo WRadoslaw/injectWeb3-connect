@@ -1,5 +1,10 @@
-const PolkadotLogo = require('./PolkadotLogo.png')
-const TalismanLogo = require('./TalismanLogo.png')
-const SubwalletLogo = require('./SubwalletLogo.png')
+import * as _PolkadotLogo from './PolkadotLogo.webp'
+import * as _TalismanLogo from './TalismanLogo.webp'
+import * as _SubwalletLogo from './SubwalletLogo.webp'
 
-export { PolkadotLogo, TalismanLogo, SubwalletLogo }
+const PolkadotLogo = _PolkadotLogo.default
+const TalismanLogo = _TalismanLogo.default
+const SubwalletLogo = _SubwalletLogo.default
+
+
+export { PolkadotLogo, SubwalletLogo ,TalismanLogo }
